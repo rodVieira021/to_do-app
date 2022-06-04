@@ -155,5 +155,13 @@ main {
 }
 
 .task .actions .delete {
-    color: crimson;
+    color: red;
+}
+
+.edit {
+    color: #efefef;
+}
+
+.done {
+    color: green;
 }
