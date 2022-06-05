@@ -110,7 +110,7 @@ main {
 }
 
 #tasks .task .content {
-    flex: 1 1 10%;
+  flex: 1 1 10%;
 }
 
 #tasks .task .content .text {
@@ -139,29 +139,28 @@ main {
   transition: 0.4s;
 }
 
-
 .task .actions button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .task .actions button:active {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .task .actions .edit {
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .task .actions .delete {
-    color: red;
+  color: red;
 }
 
 .edit {
-    color: #efefef;
+  color: #efefef;
 }
 
 .done {
-    color: green;
+  color: green;
 }

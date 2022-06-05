@@ -8,6 +8,21 @@ window.addEventListener("load", () => {
 
     let task = input.value;
 
+    /////local storage
+
+    const inputText = [];
+
+    let textInput = () => {
+      inputText.push({
+        input: input.value,
+      });
+    };
+    textInput();
+
+    localStorage.setItem("tasks", JSON.stringify(inputText));
+
+    ///////////////
+
     if (!task) {
       alert("Please fill out the task");
       return;
@@ -40,11 +55,11 @@ window.addEventListener("load", () => {
     task_delete_el.classList.add("delete");
     task_delete_el.innerHTML = '<ion-icon name="trash-outline"></ion-icon>';
 
-    const task_done_el = document.createElement('button')
-    task_done_el.classList.add('done')
-    task_done_el.innerHTML = 'Done'
+    const task_done_el = document.createElement("button");
+    task_done_el.classList.add("done");
+    task_done_el.innerHTML = "Done";
 
-    task_actions_el.appendChild(task_done_el)
+    task_actions_el.appendChild(task_done_el);
     task_actions_el.appendChild(task_edit_el);
     task_actions_el.appendChild(task_delete_el);
 
@@ -62,19 +77,17 @@ window.addEventListener("load", () => {
       } else {
         task_input_el.setAttribute("readonly", "readonly");
         task_edit_el.innerHTML = "Edit";
-        
       }
     });
 
-    task_done_el.addEventListener('click', ()=>{
-        task_input_el.style.textDecoration = 'line-through';
-        task_edit_el.remove()
-        task_done_el.remove()
-        
-    })
+    task_done_el.addEventListener("click", () => {
+      task_input_el.style.textDecoration = "line-through";
+      task_edit_el.remove();
+      task_done_el.remove();
+    });
 
     task_delete_el.addEventListener("click", () => {
-        list_el.removeChild(task_el)
+      list_el.removeChild(task_el);
     });
   });
 });
