@@ -49,11 +49,11 @@ window.addEventListener("load", () => {
 
     const task_edit_el = document.createElement("button");
     task_edit_el.classList.add("edit");
-    task_edit_el.innerHTML = '<ion-icon name="create-outline"></ion-icon>';
+    task_edit_el.innerHTML = 'Edit';
 
     const task_delete_el = document.createElement("button");
     task_delete_el.classList.add("delete");
-    task_delete_el.innerHTML = '<ion-icon name="trash-outline"></ion-icon>';
+    task_delete_el.innerHTML = 'Del';
 
     const task_done_el = document.createElement("button");
     task_done_el.classList.add("done");
